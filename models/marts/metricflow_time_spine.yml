@@ -1,0 +1,12 @@
+models:
+  - name: metricflow_time_spine
+    description: "Date spine used by MetricFlow for time-based metric calculations. Provides a daily grain date table spanning 10 years."
+    columns:
+      - name: date_day
+        description: "The date column at daily granularity"
+        granularity: day
+        data_tests:
+          - not_null
+          - unique
+    time_spine:
+      standard_granularity_column: date_day
