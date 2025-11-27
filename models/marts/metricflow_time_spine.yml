@@ -4,6 +4,7 @@ models:
     columns:
       - name: date_day
         description: "The date column at daily granularity"
+        granularity: day
         data_tests:
           - not_null
           - unique
